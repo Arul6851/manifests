@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kyverno
+  labels:
+    app: kyverno
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kyverno
+  template:
+    metadata:
+      labels:
+        app: kyverno
+    spec:
+      containers:
+        - name: kyverno
+          image: ghcr.io/kyverno/kyverno:v1.11.0
+          args:
+            - --logLevel=info
+          ports:
+            - containerPort: 9443
