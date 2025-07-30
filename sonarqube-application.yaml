@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/your-org/devops-manifests
+    repoURL: https://github.com/Arul6851/manifests
     targetRevision: HEAD
     path: sonarqube
   destination:
