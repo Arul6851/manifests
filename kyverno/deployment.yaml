@@ -18,6 +18,6 @@ spec:
         - name: kyverno
           image: ghcr.io/kyverno/kyverno:v1.11.0
           args:
-            - --logLevel=info
+            - -v=2
           ports:
             - containerPort: 9443
